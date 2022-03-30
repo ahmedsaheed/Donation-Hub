@@ -79,6 +79,9 @@ flutter_icons:
   andriod: true
   ios: true
   image_path: assets/images/logo.png
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: assets/images/1024.png
+  
   
 flutter_native_splash:
   color: "#ffffff"
