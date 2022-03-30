@@ -1,16 +1,9 @@
-# sdg_app2
+# Doantion Hub
 
-A new Flutter project.
+A smartphone application that lowers the language barrier whihc would allow users from different cultural and linguistic background understand and identify the clear outcome of the sustainable developmental goals of UN and also make a differnrce by doanting via the same platform.
 
-## Getting Started
+## Application Introduction
 
-This project is a starting point for a Flutter application.
+Aa application description is available to watch on youtube 
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [YouTube](https://youtu.be/NFlrrQAGWYg)
