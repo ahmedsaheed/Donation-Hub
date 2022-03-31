@@ -1,4 +1,4 @@
-# Doantion Hub
+# Donation Hub
 
 A smartphone application that lowers the language barrier whihc would allow users from different cultural and linguistic background understand and identify the clear outcome of the sustainable developmental goals of UN and also make a differnrce by doanting via the same platform.
 
