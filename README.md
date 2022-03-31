@@ -3,6 +3,6 @@
 
 <h1 align="center">Application Introduction<p align="center"> <img src="https://github.com/jogboms/pnyws/workflows/Format,%20Analyze%20and%20Test/badge.svg?branch=master" alt="ahmedsaheed" /> </p></h1>
 
-Aa application description is available to watch on youtube 
+<h3 align= "center">An application demo and description is available to watch on youtube 
 
-- [YouTube](https://youtu.be/NFlrrQAGWYg)
+- [YouTube](https://youtu.be/NFlrrQAGWYg)</h3>
