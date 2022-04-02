@@ -14,7 +14,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class HomeScreen extends StatelessWidget {
   static String routeName = "/home";
 
-  HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   bool get isIOS => foundation.defaultTargetPlatform == TargetPlatform.iOS;
 
@@ -66,7 +66,7 @@ class dropdown extends StatelessWidget {
     }
 
     return Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: DropdownButtonHideUnderline(
             child: DropdownButton(
           icon: const Icon(

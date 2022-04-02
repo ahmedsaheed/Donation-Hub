@@ -9,7 +9,7 @@ class actionAid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(middle: Text("Action Aid")),
+      navigationBar: const CupertinoNavigationBar(middle: Text("Action Aid")),
       child: SafeArea(
         child: WebView(
           initialUrl: AppLocalizations.of(context)!.actionaid,

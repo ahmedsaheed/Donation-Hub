@@ -1,4 +1,3 @@
-import 'package:animated_theme_switcher/animated_theme_switcher.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' as foundation;
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -6,15 +5,12 @@ import 'package:provider/provider.dart';
 import 'package:sdg_app2/constants.dart';
 import 'package:sdg_app2/l10n/l10.dart';
 import 'package:sdg_app2/provider/locale_provider.dart';
-import 'package:sdg_app2/screens/home/home_screen.dart';
 import 'package:sdg_app2/provider/google_signIn.dart';
 import 'package:sdg_app2/routs.dart';
 import 'package:sdg_app2/screens/splash/splash_screen.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:sdg_app2/screens/user_profile/component/user_details.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sdg_app2/screens/splash/components/body.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 bool get isIos => foundation.defaultTargetPlatform == TargetPlatform.iOS;
@@ -57,7 +53,7 @@ class MyApp extends StatelessWidget {
               ),
               locale: provider.locale,
               supportedLocales: I10n.all,
-              localizationsDelegates: [
+              localizationsDelegates: const [
                 AppLocalizations.delegate,
                 GlobalMaterialLocalizations.delegate,
                 GlobalCupertinoLocalizations.delegate,

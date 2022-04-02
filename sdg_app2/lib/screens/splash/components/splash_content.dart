@@ -15,7 +15,7 @@ class SplashContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Spacer(),
+        const Spacer(),
         Text(
           "DONATION HUB",
           style: TextStyle(
@@ -28,7 +28,7 @@ class SplashContent extends StatelessWidget {
           text!,
           textAlign: TextAlign.center,
         ),
-        Spacer(
+        const Spacer(
           flex: 2,
         ),
         Image.asset(

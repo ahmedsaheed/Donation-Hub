@@ -24,11 +24,9 @@ class donationdetail extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Container(
-                    child: Hero(
-                        tag: donationInfo.position,
-                        child: Image.asset(donationInfo.iconImage)),
-                  ),
+                  Hero(
+                      tag: donationInfo.position,
+                      child: Image.asset(donationInfo.iconImage)),
                   Padding(
                     padding: const EdgeInsets.all(32.0),
                     child: Column(
@@ -137,10 +135,6 @@ class donationdetail extends StatelessWidget {
                     padding: EdgeInsets.all(32.0),
                     child: Divider(color: Colors.black38),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.all(0),
-                    child: CustomBottomNavBar(selectedMenu: MenuState.explore),
-                  ),
                 ],
               ),
             ),
@@ -152,6 +146,10 @@ class donationdetail extends StatelessWidget {
             ),
           ],
         ),
+      ),
+      bottomNavigationBar: const Padding(
+        padding: EdgeInsets.all(0),
+        child: CustomBottomNavBar(selectedMenu: MenuState.explore),
       ),
     );
   }

@@ -1,11 +1,8 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sdg_app2/constants.dart';
 import 'package:sdg_app2/size_config.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class donateMain extends StatefulWidget {
@@ -23,7 +20,7 @@ class _donateMainState extends State<donateMain> {
           middle: Text(
         AppLocalizations.of(context)!.donatehead,
       )),
-      child: Scaffold(body: Donations()),
+      child: const Scaffold(body: Donations()),
     );
   }
 }
@@ -37,6 +34,7 @@ class Donations extends StatefulWidget {
 
 class _DonationsState extends State<Donations> {
   String selectedCategory = '';
+  @override
   Widget build(BuildContext context) {
     final List<String> categories = [
       AppLocalizations.of(context)!.water,
@@ -45,15 +43,7 @@ class _DonationsState extends State<Donations> {
       AppLocalizations.of(context)!.adequacy,
       AppLocalizations.of(context)!.health,
     ];
-    for (int i = 0; i < categories.length; i++)
-      @override
-      void initState() {
-        super.initState();
-        setState(() {
-          selectedCategory = categories[i];
-        });
-      }
-
+    for (int i = 0; i < categories.length; i++) {}
     final List<Items> _listItem = [
       Items(
           image: 'assets/images/SDG Wheel_Transparent_WEB.png',
@@ -184,12 +174,12 @@ class _DonationsState extends State<Donations> {
                     height: 70,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Color(0xFFf3fafc)),
+                        color: const Color(0xFFf3fafc)),
                     child: Center(
                       child: IconButton(
                         icon: SvgPicture.asset("assets/icons/give.svg"),
                         onPressed: () {},
-                        color: Color(0xFF69c5df),
+                        color: const Color(0xFF69c5df),
                         //size: 30,
                       ),
                     ),
@@ -222,23 +212,28 @@ class _DonationsState extends State<Donations> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   for (int i = 0; i < categories.length; i++)
-                    Container(
-                      width: 100,
-                      padding: const EdgeInsets.only(left: 4.0, right: 4.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: kPrimaryColor,
-                        ),
-                        child: TextButton(
-                          onPressed: () {
-                            setState(() {
-                              selectedCategory = categories[i];
-                            });
-                          },
-                          child: Center(
-                            child: Text(categories[i],
-                                style: TextStyle(color: Colors.white)),
+                    Ink(
+                      child: InkWell(
+                        child: Container(
+                          width: 100,
+                          padding: const EdgeInsets.only(left: 4.0, right: 4.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(15),
+                              color: kPrimaryColor,
+                            ),
+                            child: TextButton(
+                              onPressed: () {
+                                setState(() {
+                                  selectedCategory = categories[i];
+                                });
+                              },
+                              child: Center(
+                                child: Text(categories[i],
+                                    style:
+                                        const TextStyle(color: Colors.white)),
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -290,100 +285,7 @@ class Items {
   Items({required this.image, required this.route, required this.category});
 }
 
-
-// class Donations extends StatefulWidget {
-//   const Donations({Key? key}) : super(key: key);
-
-//   @override
-//   State<Donations> createState() => _DonationsState();
-// }
-
-// class _DonationsState extends State<Donations> {
-//   final List<String> _listItem = [
-//     'assets/images/SDG Wheel_Transparent_WEB.png',
-//     'assets/images/unicef.png',
-//     'assets/images/share.png',
-//     'assets/images/teamTrees.png',
-//     'assets/images/TeamSeas.jpeg',
-//     'assets/images/global giving.png',
-//     'assets/images/svc.png',
-//     'assets/images/food2.png',
-//     //'assets/images/five.jpg',
-//   ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Padding(
-//       padding: const EdgeInsets.all(8.0),
-//       child: SafeArea(
-//           child: SingleChildScrollView(
-//               child: Column(children: <Widget>[
-//         Container(
-//           //padding: EdgeInsets.only(right: 10),
-//           height: SizeConfig.screenHeight / 2.5,
-//           width: MediaQuery.of(context).size.width,
-
-//           //alignment: Alignment.centerLeft,
-//           child: Image.asset('assets/images/food2.png'),
-//         ),
-//         const Align(
-//           alignment: Alignment.centerLeft,
-//           child: Text(
-//             "Donation Cards",
-//             style: TextStyle(
-//               fontFamily: 'Quicksand',
-//               fontSize: 31,
-//               color: Colors.black,
-//               fontWeight: FontWeight.w300,
-//             ),
-//           ),
-//         ),
-//         const Divider(color: Colors.black38),
-//         Stack(children: <Widget>[
-          // SizedBox(
-          //   height: 20,
-          // ),
-          // Expanded(
-          //     child: GridView.count(
-          //   crossAxisCount: 2,
-          //   crossAxisSpacing: 10,
-          //   mainAxisSpacing: 10,
-          //   children: _listItem
-          //       .map((item) => Card(
-          //             color: Colors.transparent,
-          //             elevation: 0,
-          //             child: Container(
-          //               decoration: BoxDecoration(
-          //                   borderRadius: BorderRadius.circular(20),
-          //                   image: DecorationImage(
-          //                       image: AssetImage(item), fit: BoxFit.cover)),
-          //               child: Transform.translate(
-          //                 offset: Offset(50, -50),
-          //                 child: Container(
-          //                   margin: EdgeInsets.symmetric(
-          //                       horizontal: 65, vertical: 63),
-          //                   decoration: BoxDecoration(
-          //                       borderRadius: BorderRadius.circular(10),
-          //                       color: Colors.white),
-          //                   child: Icon(
-          //                     Icons.bookmark_border,
-          //                     size: 15,
-          //                   ),
-          //                 ),
-          //               ),
-          //             ),
-          //           ))
-          //       .toList(),
-          // ))
-//         ])
-//       ]))),
-//     );
-//   }
-// }
-
-
-
-
+/***************************************NOT IN USE @ THE MOMENT********************************************************/
 
 // ButtonsRow(
 //         onSetAmount: _setAmount,

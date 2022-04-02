@@ -79,7 +79,7 @@ class ProfilePage extends StatelessWidget {
           children: [
             Text(
               AppLocalizations.of(context)!.aboutt + ' Donation Hub',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 16),
             Text(

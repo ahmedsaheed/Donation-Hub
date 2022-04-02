@@ -93,6 +93,7 @@ class _GivePageState extends State<GivePage> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: kSecondaryColor,

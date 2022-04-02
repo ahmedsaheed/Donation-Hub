@@ -7,6 +7,8 @@ const functions = require("firebase-functions");
 //   functions.logger.info("Hello logs!", {structuredData: true});
 //   response.send("Hello from Firebase!");
 // });
+
+/**************************************THIS IS NO LONGER USED.******************************************* */
 const stripe = require('stripe')(functions.config().stripe.testkey);
 
 exports.stripePayment = functions.https.onRequest(async(req, res)=>{
