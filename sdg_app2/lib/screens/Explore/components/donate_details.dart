@@ -127,12 +127,16 @@ class donationdetail extends StatelessWidget {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(24),
                                 ),
-                                child: AspectRatio(
-                                    aspectRatio: 1,
-                                    child: Image.asset(
-                                      donationInfo.images[index],
-                                      fit: BoxFit.cover,
-                                    )),
+                                child: GestureDetector(
+                                  onTap: () => Navigator.pushNamed(
+                                      context, donationInfo.route[index]),
+                                  child: AspectRatio(
+                                      aspectRatio: 1,
+                                      child: Image.asset(
+                                        donationInfo.images[index],
+                                        fit: BoxFit.cover,
+                                      )),
+                                ),
                               );
                             }),
                       ),

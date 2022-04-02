@@ -30,6 +30,7 @@ class _GivePageState extends State<GivePage> {
               'assets/images/unicef.png',
               'assets/images/TeamSeas.jpeg'
             ],
+            route: ['/water', '/unicef', '/TeamSeas'],
             url: Uri.dataFromString(
                 '<html><body><iframe src="https://ourworldindata.org/grapher/death-rates-unsafe-water" loading="lazy" style="width: 100%; height: 800px; border: 0px none;"></iframe></body></html>',
                 mimeType: 'text/html'),
@@ -44,6 +45,7 @@ class _GivePageState extends State<GivePage> {
               'assets/images/gfbn.png',
               'assets/images/global giving.png'
             ],
+            route: ['/shareTheMeal', '/gfbn', '/globalGiving'],
             url: Uri.dataFromString(
                 '<html><body><iframe src="https://ourworldindata.org/grapher/global-hunger-index?country=IND~BGD~NPL~PAK" loading="lazy" style="width: 100%; height: 800px; border: 0px none;"></iframe></body></html>',
                 mimeType: 'text/html'),
@@ -56,6 +58,10 @@ class _GivePageState extends State<GivePage> {
             images: [
               'assets/images/taskforce.png',
               'assets/images/SDG Wheel_Transparent_WEB.png'
+            ],
+            route: [
+              '/taskForce',
+              '/sdg',
             ],
             url: Uri.dataFromString(
                 '<html><body><iframe src="https://ourworldindata.org/grapher/dalys-rate-from-all-causes" loading="lazy" style="width: 100%; height: 800px; border: 0px none;"></iframe></body></html>',
@@ -70,6 +76,7 @@ class _GivePageState extends State<GivePage> {
               'assets/images/theirworld.png',
               'assets/images/camara.jpeg'
             ],
+            route: ['/theirWorld', '/camera'],
             url: Uri.dataFromString(
                 '<html><body><iframe src="https://ourworldindata.org/grapher/out-of-school-girls-of-primary-school-age-by-world-region" loading="lazy" style="width: 100%; height: 800px; border: 0px none;"></iframe></body></html>',
                 mimeType: 'text/html'),
@@ -84,6 +91,7 @@ class _GivePageState extends State<GivePage> {
               'assets/images/SDG Wheel_Transparent_WEB.png',
               'assets/images/endPoverty.jpeg'
             ],
+            route: ['/pap', '/sdg', '/endPoverty'],
             url: Uri.dataFromString(
                 '<html><body><iframe src="https://ourworldindata.org/grapher/size-poverty-gap-countries?country=~BRA" loading="lazy" style="width: 100%; height: 800px; border: 0px none;"></iframe></body></html>',
                 mimeType: 'text/html'),

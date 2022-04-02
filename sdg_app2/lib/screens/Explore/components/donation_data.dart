@@ -8,6 +8,7 @@ class DonationCategory {
       required this.iconImage,
       required this.description,
       required this.images,
+      required this.route,
       required this.url});
 
   int position;
@@ -15,5 +16,6 @@ class DonationCategory {
   String iconImage;
   String description;
   List<String> images;
+  List<String> route;
   Uri url;
 }
