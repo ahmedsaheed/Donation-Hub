@@ -48,80 +48,102 @@ class _DonationsState extends State<Donations> {
       Items(
           image: 'assets/images/SDG Wheel_Transparent_WEB.png',
           route: '/sdg',
+          name: 'United Nations',
           category: AppLocalizations.of(context)!.food),
       Items(
           image: 'assets/images/actionAid2.png',
           route: '/actionAid',
+          name: "Action Aid",
           category: AppLocalizations.of(context)!.adequacy),
       Items(
           image: 'assets/images/waterOrg.png',
           route: '/water',
+          name: 'Water Org',
           category: AppLocalizations.of(context)!.water),
       Items(
           image: 'assets/images/charity_water.jpeg',
           route: '/waterCharity',
+          name: 'Charity Water',
           category: AppLocalizations.of(context)!.water),
       Items(
           image: 'assets/images/SDG Wheel_Transparent_WEB.png',
           route: '/sdg',
+          name: 'United Nations',
           category: AppLocalizations.of(context)!.water),
       Items(
           image: 'assets/images/SDG Wheel_Transparent_WEB.png',
           route: '/sdg',
+          name: 'United Nations',
           category: AppLocalizations.of(context)!.health),
       Items(
           image: 'assets/images/SDG Wheel_Transparent_WEB.png',
           route: '/sdg',
+          name: 'United Nations',
           category: AppLocalizations.of(context)!.adequacy),
       Items(
           image: 'assets/images/unicef.png',
           route: '/unicef',
+          name: 'UNICEF',
           category: AppLocalizations.of(context)!.water),
       Items(
           image: 'assets/images/share.png',
           route: '/shareTheMeal',
+          name: '',
           category: AppLocalizations.of(context)!.food),
       Items(
           image: 'assets/images/teamTrees.png',
           route: '/teamTrees',
+          name: 'Team Trees',
           category: AppLocalizations.of(context)!.health),
       Items(
           image: 'assets/images/TeamSeas.jpeg',
           route: '/TeamSeas',
+          name: 'Team Seas',
           category: AppLocalizations.of(context)!.health),
       Items(
           image: 'assets/images/global giving.png',
           route: '/globalGiving',
+          name: '',
           category: AppLocalizations.of(context)!.food),
       Items(
-          image: 'assets/images/svc2.jpeg', route: '/STC', category: "School"),
+          image: 'assets/images/svc2.jpeg',
+          route: '/STC',
+          name: 'Save The Child',
+          category: "School"),
       Items(
           image: 'assets/images/americares.png',
           route: '/americares',
+          name: 'Americares',
           category: AppLocalizations.of(context)!.school),
       Items(
           image: 'assets/images/taskforce.png',
           route: '/taskForce',
+          name: 'Health TaskForce',
           category: AppLocalizations.of(context)!.health),
       Items(
           image: 'assets/images/camara.jpeg',
           route: '/camera',
+          name: 'Camera Education',
           category: AppLocalizations.of(context)!.school),
       Items(
           image: 'assets/images/gfbn.png',
           route: '/gfbn',
+          name: 'Global Food Bank',
           category: AppLocalizations.of(context)!.food),
       Items(
           image: 'assets/images/theirworld.png',
           route: '/theirWorld',
+          name: 'Their World',
           category: AppLocalizations.of(context)!.school),
       Items(
           image: 'assets/images/pap.png',
           route: '/pap',
+          name: 'Against Poverty',
           category: AppLocalizations.of(context)!.adequacy),
       Items(
           image: 'assets/images/endPoverty.jpeg',
           route: '/endPoverty',
+          name: 'End Poverty',
           category: AppLocalizations.of(context)!.adequacy),
     ];
     return Container(
@@ -262,6 +284,13 @@ class _DonationsState extends State<Donations> {
                       child: GestureDetector(
                           onTap: () => Navigator.pushNamed(context, item.route),
                           child: Container(
+                            child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Text(item.name,
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold))),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 image: DecorationImage(
@@ -281,8 +310,13 @@ class Items {
   String image;
   String route;
   String category;
+  String name;
 
-  Items({required this.image, required this.route, required this.category});
+  Items(
+      {required this.image,
+      required this.route,
+      required this.category,
+      required this.name});
 }
 
 /***************************************NOT IN USE @ THE MOMENT********************************************************/
